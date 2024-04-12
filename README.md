@@ -8,11 +8,11 @@ Once you run the app, there's support for swagger, so you'll be able to see whic
 
 Entities-api endpoints used from the megaventory api:
 
-/LocationInventory/
+/LocationInventory
       /LocationInventoryUpdate 
       /LocationInventoryGet    
 
-/SuppierClient/
+/SuppierClient
       /SupplierClientGet       
       /SupplierClientUpdate    
 
@@ -20,11 +20,11 @@ Entities-api endpoints used from the megaventory api:
       /ProductGet              
       /ProductUpdate           
 
-/LocationInventoryStock/
+/LocationInventoryStock
       /LocationInventortStockUpdate
 
-/ProductClient/
+/ProductClient
       /ProductClientUpdate
 
-/ProductSupplier/
+/ProductSupplier
       /ProductSupplierUpdate

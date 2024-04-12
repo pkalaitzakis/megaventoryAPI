@@ -7,27 +7,15 @@ There's support for swagger, so once you compile and run the app you'll be able 
 
 https://api.megaventory.com/v2017a/documentation/index.html
 
-Entities-api endpoints used from the megaventory api:
 
-PRODUCT:
-/Product/ProductGet
-/Product/ProductUpdate
-
-SUPPLIER CLIENT:
-/SuppierClient/SupplierClientGet
-/SuppierClient/SupplierClientUpdate
-        
-LOCATION INVENTORY:
-/LocationInventory/LocationInventoryGet
-/LocationInventory/LocationInventoryUpdate
-
-PRODUCT CLIENT:
-/ProductClient/ProductClientUpdate
-
-PRODUCT SUPPLIER:
-/ProductSupplier/ProductSupplierUpdate
-
-LOCATION INVENTORY STOCK:
-/LocationInventoryStock/LocationInventortStockUpdate
-
-
+| Megaventory API Endpoint | WebApp API Endpoint | HTTP Method |
+| --- | --- | --- |
+| `/Product/ProductGet` | `/Product/ProductGetBySKU` | POST |
+| `/Product/ProductUpdate` | `/Product/ProductUpdate` | POST |
+| `/SuppierClient/SupplierClientGet` | `/SuppierClient/SupplierClientGetByPhone1` | POST |
+| `/SuppierClient/SupplierClientUpdate` | `/SuppierClient/SupplierClientUpdate` | POST |
+| `/LocationInventory/LocationInventoryGet` | `/LocationInventory/LocationInventoryGet` | POST |
+|`/LocationInventory/LocationInventoryUpdate` | `/LocationInventory/LocationInventoryUpdate` | POST |
+|`/ProductClient/ProductClientUpdate` | `/SupplierClient/SupplierClientRelationUpdate` | POST |
+|`/ProductSupplier/ProductSupplierUpdate` | `/SupplierClient/SupplierClientRelationUpdate` | POST |
+|`/LocationInventoryStock/LocationInventoryStockUpdate` | `/LocationInventory/LocationInventoryProductUpdate` | POST |

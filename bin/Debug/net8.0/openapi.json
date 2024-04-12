@@ -1,0 +1,130 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "API V1",
+      "version": "v1"
+    },
+    "paths": {
+      "/Product/ProductUpdate": {
+        "post": {
+          "tags": [
+            "Product/ProductUpdate"
+          ],
+          "operationId": "ProductUpdate",
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/mvProduct"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/ContactPerson/ContactPersonUpdate": {
+        "post": {
+            "tags": [
+              "ContactPerson"
+            ],
+            "operationId": "ContactPersonUpdate",
+            "responses": {
+              "200": {
+                "description": "Success",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/mvContactPerson"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Product": {
+          "type": "object",
+          "properties": {
+            "ProductSKU": {
+              "type": "string",
+              "nullable": false
+            },
+            "ProductDescription": {
+              "type": "string",
+              "nullable": false
+            },
+            "ProductSellingPrice": {
+              "type": "double"
+            },
+            "ProductPurchasePrice": {
+                "type": "double"
+              }
+          },
+          "additionalProperties": false
+        },
+        "SupplierClient": {
+            "type": "object",
+            "properties": {
+              "ContactId": {
+                "type": "int"
+              },
+              "ContactName": {
+                "type": "string",
+                "nullable": false
+              },
+              "ContactDepartment": {
+                "type": "string",
+                "nullable": false
+              },
+              "ContactFullAddress": {
+                "type": "mvAddress"
+              },
+              "ContactEmail": {
+                "type": "string",
+                "nullable": false
+              },
+              "ContactPhone1": {    
+                "type": "string",
+                "nullable": false
+              },
+              "ContactPhone2": {
+                "type": "string",
+                "nullable": false
+              },
+              "ContactFax": {
+                "type": "string",
+                "nullable": false
+              },
+              "ContactIM": {
+                "type": "string",
+                "nullable": false
+              },
+              "ContactCustomField1": {                         
+                "type": "string",
+                "nullable": false
+              },
+              "ContactCustomField2": {
+                "type": "string",
+                "nullable": false
+            },
+            "ContactIsPrimary": {
+                "type": "bool"
+            }           
+            },
+            "additionalProperties": false
+          }
+      }
+    }
+  }
